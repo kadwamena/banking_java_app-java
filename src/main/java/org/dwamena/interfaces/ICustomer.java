@@ -1,4 +1,4 @@
-package interfaces;
+package org.dwamena.interfaces;
 
 import java.util.ArrayList;
 

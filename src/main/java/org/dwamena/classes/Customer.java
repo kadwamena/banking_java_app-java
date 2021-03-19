@@ -1,6 +1,6 @@
-package classes;
+package org.dwamena.classes;
 
-import interfaces.ICustomer;
+import org.dwamena.interfaces.ICustomer;
 import java.util.ArrayList;
 
 public class Customer implements ICustomer {

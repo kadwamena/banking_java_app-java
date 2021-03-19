@@ -1,15 +1,15 @@
-package classes;
+package org.dwamena.classes;
 
-import interfaces.IBank;
+import org.dwamena.interfaces.IBank;
 import java.util.ArrayList;
 
 public class Bank implements IBank {
     private String name;
-    private ArrayList<classes.Branch> branches;
+    private ArrayList<Branch> branches;
     // Bank constructor instantiate name of bank
     public Bank(String name) {
         this.name = name;
-        this.branches = new ArrayList<classes.Branch>();
+        this.branches = new ArrayList<Branch>();
     }
 
 

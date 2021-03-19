@@ -1,6 +1,6 @@
-package interfaces;
+package org.dwamena.interfaces;
 
-import classes.Customer;
+import org.dwamena.classes.Customer;
 
 import java.util.ArrayList;
 

@@ -1,15 +1,14 @@
-package classes;
+package org.dwamena.classes;
 
-import interfaces.IBank;
 import java.util.ArrayList;
 
 public class Branch implements IBranch {
     private String name;
-    private ArrayList<classes.Customer> customers;
+    private ArrayList<Customer> customers;
 
     public Branch(String name) {
         this.name = name;
-        this.customers = new ArrayList<classes.Customer>();
+        this.customers = new ArrayList<Customer>();
     }
 
     @Override
@@ -20,7 +19,7 @@ public class Branch implements IBranch {
 
 
     @Override
-    public ArrayList<classes.Customer> getCustomer() {
+    public ArrayList<Customer> getCustomer() {
         // returns a list of customers
         return this.customers;
     }
@@ -45,7 +44,7 @@ public class Branch implements IBranch {
         // checks if customer exist and transaction to be added is not less than or equal to zero
         if(findCustomer(customerName) !=null && (transaction > 0) ){
             // customer variable to reference customer object returned
-            classes.Customer customer = findCustomer(customerName);
+            Customer customer = findCustomer(customerName);
             //add transaction to referenced customer object
             customer.addTransactions(transaction);
             return true;
@@ -54,9 +53,9 @@ public class Branch implements IBranch {
     }
 
 
-    private classes.Customer findCustomer(String customerName) {
+    private Customer findCustomer(String customerName) {
         // iterate through the list of customers
-        for(classes.Customer customer : customers){
+        for(Customer customer : customers){
             // checks if customer name in customers list is same as customer name passed
             if(customer.getName().equalsIgnoreCase(customerName)){
                 // if true return the customer object
